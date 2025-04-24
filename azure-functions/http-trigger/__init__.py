@@ -19,6 +19,9 @@ However, it remains best practice to include it for clarity and compatibility, e
 
 import logging 
 import azure.functions as func
+from azure.identity import DefaultAzureCredential
+from azure.keyvault import SecretClient
+from azure.storage.blob import BlobServiceClient
 
 app = func.FunctionApp()
 
