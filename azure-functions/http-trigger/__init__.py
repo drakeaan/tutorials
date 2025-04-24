@@ -1,4 +1,6 @@
-
+# renamed to __init__.py
+# does this work like startup.cs / program.cs? inherently functioning as first-tier initialization?
+# TODO: figure out the reason for __init__.py 
 
 import logging 
 import azure.functions as func
