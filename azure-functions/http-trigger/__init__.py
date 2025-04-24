@@ -2,6 +2,21 @@
 # does this work like startup.cs / program.cs? inherently functioning as first-tier initialization?
 # TODO: figure out the reason for __init__.py 
 
+
+# From google...
+"""
+The __init__.py file serves to mark a directory as a Python package. 
+When the Python interpreter encounters a directory containing this file, it recognizes the directory as a package, 
+allowing modules within it to be imported using dot notation. 
+
+In its simplest form, __init__.py can be an empty file. However, it can also contain initialization code that executes when the package is imported. 
+This may include setting package-level variables, importing submodules, or running setup operations. 
+It can also control what symbols are exported from the package, which is useful for selectively importing symbols and avoiding namespace clutter. 
+
+While __init__.py was historically required for all packages, Python 3.3 introduced implicit namespace packages, making it optional in some cases. 
+However, it remains best practice to include it for clarity and compatibility, especially when needing to define package-level initialization or control imports.
+"""
+
 import logging 
 import azure.functions as func
 
