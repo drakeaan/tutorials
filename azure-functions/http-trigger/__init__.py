@@ -28,12 +28,16 @@ app = func.FunctionApp()
 # TODO: figure out async as well as multiple return types (if at all).
 # e.g. (str, str) returnVals(str abc){}. What would that look like in python
 # also to do: get a keyboard where I and O are swopped so I can stop typing pythin
+
 @app.function_name(name="HttpTrigger1")
-# req --> Request object. in this case, should the Azure function HttpRequest.
-def main(req:func.HttpRequest) -> str:
+def main(req:func.HttpRequest) -> str:   # req --> Request object. in this case, should the Azure function HttpRequest.
     print(req.params.get(''))
 
-    return "foo"
+    t = "foo" 
+    x = "bar"
+    # so f works as string interpolation. e.g. $"{t}";
+    # explicitly formatting would be: "{0} {1}".format(t, x)
+    return f"{t} {x}"
 
 # so same async keyword as C# and also same await keyword when calling an async method.
 # e.g. await main(blah)
@@ -51,3 +55,4 @@ async def main(req:func.HttpRequest, ctx:func.ExecutionContex) -> func.HttpRespo
 # overall, the structure is similar... just syntactically slightly different (but not that much).
 # need to just figure out imports compared to usings (which objects are where..)
 # also remember which lines of code ends with : compared to C# everything ends with ;
+
