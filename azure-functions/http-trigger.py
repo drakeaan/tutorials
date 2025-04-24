@@ -20,6 +20,7 @@ def main(req:func.HttpRequest) -> str:
 
 # so same async keyword as C# and also same await keyword when calling an async method.
 # e.g. await main(blah)
+# TODO: Also, do overloads function the same? TBD
 async def main(req:func.HttpRequest, ctx:func.ExecutionContex) -> func.HttpResponse:
     logging.info('Python http trigger')
     # can construct an object inline...
