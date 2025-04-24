@@ -14,3 +14,11 @@ Python's syntax is designed to be easy to read and write, making it a popular ch
 There seems to be a lot of overlap with C++ especially in the syntax. I think I will be able to pick it up quickly.
 
 Numerical values seems to prefer the C++ style of 0.L for floats/doubles and 0 for integers. I think this is a good idea as it makes it clear what type of number you are dealing with. I will try to stick to this style in my code even in C# to make it easier to switch between languages.
+
+e.g.
+num = 123.4567
+print(f"Number: {num:.2f}") # Keep 2 decimals
+print(f"Number: {num:10.2f}") # Keep 2 decimals, total length is 10
+print(f"Number: {num:<10.2f}") # Keep 2 decimals, total length is 10, left align
+print(f"Number: {num:>10.2f}") # Keep 2 decimals, total length is 10, right align
+print(f"Number: {num:^10.2f}") # Keep 2 decimals, total length is 10, center align
