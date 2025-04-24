@@ -1,13 +1,5 @@
-# Minimum packages for azure functions
+# DO NOT include azure-functions-worker in this file
+# The Python Worker is managed by Azure Functions platform
+# Manually managing azure-functions-worker may cause unexpected issues
+
 azure-functions
-azure-functions-worker
-grpcio~=1.20.1
-grpcio-tools~=1.20.1
-protobuf==3.6.1
-six==1.11.0
-# Additional packages
-requests==2.20.1
-feedparser==5.2.1
-Pillow==8.2.0
-numpy==1.18.1
-onnxruntime==1.4.0
