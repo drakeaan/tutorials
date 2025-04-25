@@ -23,7 +23,7 @@ from azure.identity import DefaultAzureCredential
 from azure.keyvault import SecretClient
 from azure.storage.blob import BlobServiceClient
 
-app = func.FunctionApp()
+#app = func.FunctionApp()
 
 # so python differs here from C#...
 # @ defines the decorator attribute...
@@ -32,30 +32,31 @@ app = func.FunctionApp()
 # e.g. (str, str) returnVals(str abc){}. What would that look like in python
 # also to do: get a keyboard where I and O are swopped so I can stop typing pythin
 
-@app.function_name(name="HttpTrigger1")
-def main(req:func.HttpRequest) -> str:   # req --> Request object. in this case, should the Azure function HttpRequest.
-    print(req.params.get(''))
+#@app.function_name(name="HttpTrigger1")
+# def main(req:func.HttpRequest) -> str:   # req --> Request object. in this case, should the Azure function HttpRequest.
+#     print(req.params.get(''))
 
-    t = "foo" 
-    x = "bar"
-    # so f works as string interpolation. e.g. $"{t}";
-    # explicitly formatting would be: "{0} {1}".format(t, x)
-    return f"{t} {x}"
+#     t = "foo" 
+#     x = "bar"
+#     # so f works as string interpolation. e.g. $"{t}";
+#     # explicitly formatting would be: "{0} {1}".format(t, x)
+#     return f"{t} {x}"
 
 # so same async keyword as C# and also same await keyword when calling an async method.
 # e.g. await main(blah)
 # TODO: Also, do overloads function the same? TBD
-async def main(req:func.HttpRequest, ctx:func.ExecutionContex) -> func.HttpResponse:
-    logging.info('Python http trigger')
-    # can construct an object inline...
-    # TODO: determine new()
-    return func.HttpResponse( 
-            "This HTTP-triggered function executed successfully. " 
-            "Some more text.", 
-            status_code=200 
-        )
+# async def main(req:func.HttpRequest) -> func.HttpResponse:
+#     logging.info('Python http trigger')
+#     # can construct an object inline...
+#     # TODO: determine new()
+#     return func.HttpResponse( 
+#             "This HTTP-triggered function executed successfully. " 
+#             "Some more text.", 
+#             status_code=200 
+#         )
 
 # overall, the structure is similar... just syntactically slightly different (but not that much).
 # need to just figure out imports compared to usings (which objects are where..)
+
 # also remember which lines of code ends with : compared to C# everything ends with ;
 
