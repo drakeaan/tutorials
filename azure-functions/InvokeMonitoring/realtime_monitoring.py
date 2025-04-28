@@ -2,6 +2,7 @@ import azure.functions as func
 import datetime
 import json
 import logging
+import os
 
 monitor = func.Blueprint()
 
@@ -13,4 +14,6 @@ def realtime_monitoring(myTimer: func.TimerRequest) -> None:
         logging.info('The timer is past due!')
 
     logging.info('Python timer trigger function executed.')
+
+    datadog_api_key = os.environ["Datadog.ApiKey"]
 
