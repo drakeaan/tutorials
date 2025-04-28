@@ -7,3 +7,7 @@ azure-identity
 azure-keyvault
 azure-storage-blob
 azure-storage-queue
+pyodbc
+fastapi
+uvicorn[standard]
+pydantic
