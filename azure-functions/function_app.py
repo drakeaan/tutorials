@@ -4,10 +4,16 @@ import json
 import logging
 from blob import *
 
+# so... this is an interesting find. 
+# InvokeMonitoring.realtime_monitoring converts to: folder/file.py
+# so in Python, the "namespace" means a file that needs to be imported requires its path separated by '.'
+from InvokeMonitoring.realtime_monitoring import *
+
 # So this is the MAIN entrypoint... 
 # and we can register functions
 app = func.FunctionApp()
 app.register_functions(blob) 
+app.register_functions(realtime_monitoring) 
 
 @app.route(route="HttpExample")
 def HttpExample(req: func.HttpRequest) -> func.HttpResponse:
@@ -36,3 +42,5 @@ def HttpExample(req: func.HttpRequest) -> func.HttpResponse:
 def queue_trigger(azqueue: func.QueueMessage):
     logging.info('Python Queue trigger processed a message: %s',
                 azqueue.get_body().decode('utf-8'))
+
+
