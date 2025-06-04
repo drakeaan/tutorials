@@ -1,3 +1,4 @@
+[![Board Status](https://dev.azure.com/drakeaan/89b7138a-4d94-4d3c-8c15-8b50816ee5aa/00f2fa8a-cecb-48e4-8023-c2f9f8ba9a5d/_apis/work/boardbadge/2a645c18-072d-4a8b-95a4-f8a03f9ab2b3)](https://dev.azure.com/drakeaan/89b7138a-4d94-4d3c-8c15-8b50816ee5aa/_boards/board/t/00f2fa8a-cecb-48e4-8023-c2f9f8ba9a5d/Microsoft.RequirementCategory)
 # General tutorials for me to learn and practice Python and shell scripting.
 
 ## Main takeways so far:
