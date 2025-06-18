@@ -11,3 +11,17 @@ pyodbc
 fastapi
 uvicorn[standard]
 pydantic
+aiohttp
+azure-ai-agents
+azure-ai-projects
+azure-ai-textanalytics
+azure-common
+azure-core
+azure-core-tracing-opentelemetry
+azure-mgmt-core
+azure-mgmt-logic
+azure-monitor-opentelemetry
+azure-monitor-opentelemetry-exporter
+azure-storage-blob
+azure-ai-textanalytics
+promptflow-core
