@@ -12,9 +12,7 @@ namespace CSharp_AI;
 
 internal class AnomalyDetector
 {
-    
-
-    public void Run()
+    public async Task Run()
     {
         // Setup a listener to monitor logged events.
         using AzureEventSourceListener listener = AzureEventSourceListener.CreateConsoleLogger();
@@ -57,10 +55,8 @@ internal class AnomalyDetector
             Console.WriteLine($"Detection error. {ex.Message}");
             throw;
         }
-
-
-
     }
+
 
     // Streaming Detection
     public void StreamingDetection()
