@@ -1,4 +1,4 @@
-﻿namespace CSharp_AI;
+﻿namespace CSharpAI;
 
 internal class Program
 {

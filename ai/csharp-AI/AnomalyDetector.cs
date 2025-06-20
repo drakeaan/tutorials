@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp_AI;
+namespace CSharpAI;
 
-internal class AnomalyDetector
+public sealed class AnomalyDetector
 {
     public async Task Run()
     {

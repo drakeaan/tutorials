@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp_AI;
+namespace CSharpAI;
 
 internal class TextTranslation
 {

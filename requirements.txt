@@ -25,3 +25,4 @@ azure-monitor-opentelemetry-exporter
 azure-storage-blob
 azure-ai-textanalytics
 promptflow-core
+semantic-kernel
