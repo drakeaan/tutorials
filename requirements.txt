@@ -26,3 +26,4 @@ azure-storage-blob
 azure-ai-textanalytics
 promptflow-core
 semantic-kernel
+azure-ai-inference
